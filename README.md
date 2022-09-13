@@ -1,6 +1,6 @@
 # stock-management-system
 
-Staarted the project for learning and getting more experience about Core PHP.
+Started the project for learning and getting more experience about Core PHP.
 Used starBootstrap and dev-dashboard to design the frontend. 
 Merged the both dashboards to give a unique look to the frontend.
 This is the first project in which Ajax.
