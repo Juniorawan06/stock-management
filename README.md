@@ -34,6 +34,6 @@
 <h3 align='center'> Dashboard 🏡</h3>
 
 <div align='center'>
-<img src="vendors/images/dashboard" alt="Dashboard Screenshot">
+<img src="vendors/images/dashboard.PNG" alt="Dashboard Screenshot">
 
 </div>
