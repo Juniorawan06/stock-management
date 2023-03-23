@@ -6,6 +6,7 @@ if (!isset($_SESSION['staffPass'])) {
 include("components.php");
 myHead("Staff");
 ?>
+
 <body class="sb-nav-fixed">
     <?php
 
@@ -24,14 +25,13 @@ myHead("Staff");
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                         <strong>Alert!</strong> Users are not allowed to add, edit or delete Staff
                     </div>
-                    <?php if ($_SESSION['role']==="admin") {?>
+                    <?php if ($_SESSION['role'] === "admin") { ?>
 
                         <a class="btn btn-primary m-3" href="addStaff.php" role="button">+ Add Staff</a>
 
-                    <?php }
-                    else {?>
-                    <button type="button" class="btn btn-primary m-3" onclick="check()">+ Add Staff</button>
-                    <?php }?>
+                    <?php } else { ?>
+                        <button type="button" class="btn btn-primary m-3" onclick="check()">+ Add Staff</button>
+                    <?php } ?>
                 </div>
                 <div class="card mb-4">
                     <div class="card-header">
@@ -97,19 +97,19 @@ myHead("Staff");
                                             <?php } ?>
                                             <td>
                                                 <?php
-                                                if ($_SESSION['role']==="admin") {
-                                                echo '
+                                                if ($_SESSION['role'] === "admin") {
+                                                    echo '
                                                     <center>
                                                         <a class="btn btn-outline-success" href="editStaff.php?staffId=' . $row["staffId"] . '"><i class="fas fa-edit"></i></a>
 
                                                         <button class="btn btn-outline-danger delete_btn"><i class="fas fa-trash"></i></button>
                                                     </center>
-                                                    ';}
-                                                    else{
-                                                        echo '<button class="btn btn-outline-success user" onclick="check()"><i class="fas fa-edit"></i></button>
+                                                    ';
+                                                } else {
+                                                    echo '<button class="btn btn-outline-success user" onclick="check()"><i class="fas fa-edit"></i></button>
 
                                                         <button class="btn btn-outline-danger user" onclick="check()"><i class="fas fa-trash"></i></button>';
-                                                    }
+                                                }
                                                 ?>
                                             </td>
                                         </tr>
@@ -122,6 +122,7 @@ myHead("Staff");
                     </div>
                 </div>
             </div>
+
             <!-- Delete A4 Modal -->
             <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -172,7 +173,7 @@ myHead("Staff");
 
         function check() {
             var user = document.getElementById("user");
-            user.style= "display: block !important;"
+            user.style = "display: block !important;"
         }
     </script>
 </body>
